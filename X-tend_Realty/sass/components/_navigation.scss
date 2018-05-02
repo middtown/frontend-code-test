@@ -1,21 +1,65 @@
 .navigation {
+	margin: 0 2rem 0.3125rem 0;
 
 	&__icon {
 		display: block;
 		text-align: center;
-		margin: 1rem;
+		margin: 0.625rem 1rem;
+
+		&--link {
+			&:link,
+			&:visited {
+				color: $color-dark;
+				text-decoration: none;
+			}
+
+			&:hover,
+			&:active {
+				color: $color-dark;
+				text-decoration: none;
+			}
+		}
 
 		&--text {
 			color: $color-medium;
+			font-size: $font-size-sm;
+			margin-bottom: 0;
 		}
 	}
 
+	&__logo--main {
+		width: auto;
+		height: 80px;
+		margin-left: 2rem;
+	}
+	
 	&__text {
 		text-transform: uppercase;
 		color: $color-dark;
+		font-weight: $font-weight-bold;
+
+		&:not(:last-child) {
+			margin-right: 3.1rem;
+		}
 	}
 
-	&__list {
-		display: block;
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-dark;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+		}
+
+		&:hover,
+		&:active {
+			color: $color-dark;
+		}
+	}
+
+	&__svg {
+		width: 1rem;
+		height: 1rem;
 	}
 }

@@ -11,39 +11,77 @@
 	<title>X-tend Realty</title>
 </head>
 <body>
-	<header class="header">
+	<header>
 		<!-- Image and text -->
-		<nav class="navbar navbar-white bg-white">
-		 	<a class="navbar-brand" href="#">
-		   		<img src="assets/SVGs/TEN-logo.svg" width="auto" height="100" class="d-inline-block align-top" alt="x-tend logo">
+		<nav class="navbar navbar-white bg-white p-0">
+		 	<a class="navbar-brand p-0" href="#">
+		   		<img src="assets/SVGs/TEN-logo.svg" class="navigation__logo--main d-inline-block align-top" alt="x-tend logo">
 		 	</a>
-		 	<div>
+		 	<div class="navigation">
 				<ul class="nav">
 			  		<li class="nav-item navigation__icon"> 
-			  		<a class="" href="#"><img src="assets/SVGs/contact.svg" width="auto" height="100" class="svg d-inline-block align-top" alt="contact icon"><p class="navigation__icon--text">Contact</p>
-			  		</a>
+				  		<a class="navigation__icon--link" href="#"><img src="assets/SVGs/contact.svg" class="navigation__svg d-inline-block align-top" alt="contact icon"><p class="navigation__icon--text">Contact</p>
+				  		</a>
 			  		</li>
 			  		<li class="navigation__icon"> 
-			  		<a class="" href="#"><img src="assets/SVGs/search.svg" width="auto" height="100" class="svg d-inline-block align-top" alt="search icon"> <p class="navigation__icon--text">Search</p>
-			  		</a>
+				  		<a class="navigation__icon--link" href="#"><img src="assets/SVGs/account.svg" class="navigation__svg d-inline-block align-top" alt="search icon"> <p class="navigation__icon--text">Account</p>
+				  		</a>
 			  		</li>		  
 				</ul>
-				<ul class="nav ">
-				  	<li class="nav-item"> <a class="nav-link navigation__text" href="#">Search</a> </li>
-				  	<li class="nav-item"> <a class="nav-link navigation__text" href="#">Communities</a> </li>
-				 	<li class="nav-item"> <a class="nav-link navigation__text" href="#">Services</a> </li>
-				 	<li class="nav-item"> <a class="nav-link navigation__text" href="#">About Us</a> </li>
+				<ul class="nav">
+				  	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Search</a> </li>
+				  	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Communities</a> </li>
+				 	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Services</a> </li>
+				 	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">About Us</a> </li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-
-	<section class="quick-search">
-		<form>
-			<input type="" name="">
-			<button></button>
+						<!--	QUICK SEARCH AND LINKS BAR	-->
+	<section class="quick-search navbar">
+		<div class="container">
+		<form >
+			<input class="quick-search__search" type="text" name="search" placeholder="Address, City, Zip, or MLS #">
+			<button class="btn quick-search__btn">Search</button>
 		</form>
-		
+		<ul class="quick-search__list nav">
+			<li class="nav-item quick-search__text"><a class="quick-search__link" href=""><u>New Listings</u></a></li>
+			<li class="nav-item quick-search__text"><a class="quick-search__link" href=""><u>Open House</u></a></li>
+			<li class="nav-item quick-search__text"><a class="quick-search__link" href=""><u>Map Search</u></a></li>
+		</ul>
+		</div>
+	</section>
+								<!--	AGENT INFO		-->
+	<section class="agent">
+		<div class="container">
+			<div class="row">
+
+			<picture class="agent-img col-4">
+				<source media="(min-width: 650px)" srcset="assets/Realtor-Image/saramortensun-264w.png">
+				<source media="(min-width: 465px)" srcset="assets/Realtor-Image/saramortensun-213w.png">
+				<source media="(min-width: 411px)" srcset="assets/Realtor-Image/saramortensun-159w.png">
+				<source media="(minx-width: 200px)" srcset="assets/Realtor-Image/saramortensun-210w-xs.png">
+				<img src="assets/Realtor-Image/saramortensun.jpg" alt="sarah mortensun profile photo">
+			</picture>
+
+			<div class="agent-info col-4">
+				<h2>Jane Smith</h2>
+				<h4>Realtor &reg;</h4>
+				<button class="btn">Contact Me</button>
+				<div class="social-media-icons"> icons </div>
+			</div>
+
+			<div class="agent-contact col-4">
+				<ul class="agent-contact">
+					<li class="nav-link">phone number</li>
+					<li class="nav-link">Visit My Website</li>
+					<li class="nav-link">Denver Office</li>
+					<li class="nav-link">eNewsletter Sign Up</li>
+				</ul>
+			</div>
+
+			</div>
+		</div>
 	</section>
 
 

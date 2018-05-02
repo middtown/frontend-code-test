@@ -1,5 +1,8 @@
-//FONTS
-$font-size-base: 1rem;
+/*=============================================>>>>>
+			VARIABLES & CHANGES TO BOOTSTRAP
+===============================================>>>>>*/
+
+@import "sass/abstracts/variables";
 
 /*=============================================>>>>>
 					BOOTSTRAP
@@ -11,39 +14,15 @@ $font-size-base: 1rem;
 @import "node_modules/bootstrap/scss/bootstrap";
 
 /*=============================================>>>>>
-					VARIABLES
-===============================================>>>>>*/
-
-
-//COLORS
-$color-dark: #323232;
-$color-medium: #595959;
-$color-light: #aaaaaa;
-$color-ultra-light: #fefdfd;
-$color-accent-1: #237377;
-
-/*=============================================>>>>>
-					TYPOGRAPHY
-===============================================>>>>>*/
-
-//find all of the typography styling here
-
-body {
-	font-family: "lato", sans-serif;
-	font-weight: 400;
-	line-height: 1.7;
-	color: $color-dark;
-}
-
-/*=============================================>>>>>
 				SASS FILE IMPORTS
 ===============================================>>>>>*/
+@import "sass/pages/about";
 
-@import "sass/layout/header";
-
-@import "sass/components/svg";
-@import "sass/components/navigation";
+@import "sass/components/header";
 @import "sass/components/quick-search";
+@import "sass/components/navigation";
+@import "sass/components/buttons";
+
 
 
 
