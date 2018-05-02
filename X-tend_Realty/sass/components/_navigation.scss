@@ -1,0 +1,21 @@
+.navigation {
+
+	&__icon {
+		display: block;
+		text-align: center;
+		margin: 1rem;
+
+		&--text {
+			color: $color-medium;
+		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		color: $color-dark;
+	}
+
+	&__list {
+		display: block;
+	}
+}

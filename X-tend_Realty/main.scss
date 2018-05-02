@@ -1,0 +1,49 @@
+//FONTS
+$font-size-base: 1rem;
+
+/*=============================================>>>>>
+					BOOTSTRAP
+===============================================>>>>>*/
+
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/*=============================================>>>>>
+					VARIABLES
+===============================================>>>>>*/
+
+
+//COLORS
+$color-dark: #323232;
+$color-medium: #595959;
+$color-light: #aaaaaa;
+$color-ultra-light: #fefdfd;
+$color-accent-1: #237377;
+
+/*=============================================>>>>>
+					TYPOGRAPHY
+===============================================>>>>>*/
+
+//find all of the typography styling here
+
+body {
+	font-family: "lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $color-dark;
+}
+
+/*=============================================>>>>>
+				SASS FILE IMPORTS
+===============================================>>>>>*/
+
+@import "sass/layout/header";
+
+@import "sass/components/svg";
+@import "sass/components/navigation";
+@import "sass/components/quick-search";
+
+
+

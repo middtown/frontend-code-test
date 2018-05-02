@@ -1,0 +1,19 @@
+.svg {	
+	width: 1rem;
+	height: 1rem;
+
+	&,
+	&:link,
+	&:visited {
+		border: none;
+		cursor: pointer;	
+	}
+
+	&__contact {
+		display: block;
+		width: 100px;
+		height: 82px;
+		background: url("assets/SVGs/contact.svg");
+		background-size: 1rem 1rem;
+	}
+}

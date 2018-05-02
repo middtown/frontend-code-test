@@ -1,4 +1,5 @@
-# Frontend Code Test
+# X-tend_Realty
+
 ## HTML/CSS Test
 Use the PSD or JPG design file to create an HTML/CSS ready web page. Below is criteria for this project:
 1. Photoshop design files are in the Designs folder. If you do not have Photoshop I have also included a layout.jpg to use as a reference. 
