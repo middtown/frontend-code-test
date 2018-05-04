@@ -1,0 +1,24 @@
+.social-icons {
+	display: inline-block;
+	vertical-align: bottom;
+
+	&:not(:last-child) {
+		margin: 0 2.3rem 0 0;
+	}
+
+	&__footer {
+		display: inline-block;
+		vertical-align: bottom;
+		margin: 0 2.3rem 0 0;
+
+		&--realty {
+			display: inline-block;
+			vertical-align: bottom;
+
+			&:not(:last-child) {
+				padding: 0 1.5rem 0 0;
+			}
+		}
+	}
+
+}

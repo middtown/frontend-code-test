@@ -1852,7 +1852,7 @@ select.form-control:focus::-ms-value {
 .col-form-label-sm {
   padding-top: calc(0.25rem + 1px);
   padding-bottom: calc(0.25rem + 1px);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 
@@ -1887,7 +1887,7 @@ select.form-control:focus::-ms-value {
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -1897,7 +1897,7 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .input-group-sm > .input-group-append > select.input-group-text:not([size]):not([multiple]),
 .input-group-sm > .input-group-prepend > select.btn:not([size]):not([multiple]),
 .input-group-sm > .input-group-append > select.btn:not([size]):not([multiple]) {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.625rem + 2px);
 }
 
 .form-control-lg, .input-group-lg > .form-control,
@@ -2714,7 +2714,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -2940,7 +2940,7 @@ input[type=button].btn-block {
   display: block;
   padding: 0.5rem 1.5rem;
   margin-bottom: 0;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: #6c757d;
   white-space: nowrap;
 }
@@ -3325,7 +3325,7 @@ input[type=button].btn-block {
 }
 
 .custom-select-sm {
-  height: calc(1.8125rem + 2px);
+  height: calc(1.625rem + 2px);
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   font-size: 75%;
@@ -4226,7 +4226,7 @@ input[type=button].btn-block {
 
 .pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 .pagination-sm .page-item:first-child .page-link {
@@ -4898,7 +4898,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   word-wrap: break-word;
   opacity: 0;
 }
@@ -5000,7 +5000,7 @@ button.close {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -8578,10 +8578,19 @@ h3 {
 /*=============================================>>>>>
 				SASS FILE IMPORTS
 ===============================================>>>>>*/
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .agent {
   width: 100%;
   height: 22.625rem;
   background-color: #eeeeee;
+}
+.agent__img {
+  padding: 0;
+  display: inline-block;
 }
 .agent__info {
   margin-top: 5rem;
@@ -8600,29 +8609,30 @@ h3 {
 }
 .agent__info--btn {
   font-weight: 700;
-  color: #eeeeee;
+  color: #fffefe;
   background-color: #237377;
   width: 16.44rem;
   height: 2.56rem;
 }
-.agent__info--social-icons:not(:last-child) {
-  margin: 1.5rem 2.3rem 2.3rem 0;
-}
 .agent__contact {
   margin-top: 5rem;
+  display: inline-block;
 }
 .agent__contact--icon {
   width: 1.125rem;
   height: 1.125rem;
+  display: inline-block;
 }
 .agent__contact--text {
   color: #237377;
   font-size: 1.125rem;
+  display: inline-block;
 }
 .agent__contact--phone-number {
   color: #595959;
   font-size: 1.125rem;
   text-decoration: none;
+  display: inline-block;
 }
 .agent__contact--phone-number:link, .agent__contact--phone-number:visited {
   color: #595959;
@@ -8634,7 +8644,65 @@ h3 {
 
 .tabs {
   width: 100%;
-  height: 45.25rem;
+  height: 31.625rem;
+}
+.tabs__list {
+  width: 100%;
+  margin-bottom: 0;
+}
+.tabs__list--area {
+  border-bottom: 2px solid #aaaaaa;
+  display: inline-block;
+  text-align: center;
+}
+.tabs__list--active {
+  display: inline-block;
+  text-align: center;
+  border-bottom: 2px solid #2399a6;
+  z-index: 9999;
+}
+.tabs__link {
+  display: inline-block;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+}
+.tabs__link--text {
+  color: #aaaaaa;
+}
+.tabs__link--text:link, .tabs__link--text:visited {
+  color: #aaaaaa;
+}
+.tabs__link--text:hover, .tabs__link--text:active {
+  color: #aaaaaa;
+}
+.tabs__link--active {
+  color: #2399a6;
+}
+.tabs__link--active:link, .tabs__link--active:visited {
+  color: #2399a6;
+}
+.tabs__link--active:hover, .tabs__link--active:active {
+  color: #2399a6;
+}
+.tabs__paragraph {
+  color: #595959;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 200%;
+  margin-right: 1rem;
+}
+.tabs__geo-info--list {
+  margin-left: 6rem;
+}
+.tabs__geo-info--title {
+  text-transform: uppercase;
+  color: #323232;
+  font-size: 1rem;
+}
+.tabs__geo-info--desc {
+  color: #595959;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
 
 .header {
@@ -8646,51 +8714,81 @@ h3 {
   width: 100%;
   height: 3.8125rem;
   box-shadow: 0px 1px 1px #eeeeee;
+  vertical-align: middle;
+  display: inline-block;
+}
+.quick-search__form {
+  vertical-align: top;
+}
+.quick-search__list {
+  margin-left: 4rem;
+  display: inline-block;
 }
 .quick-search__text {
   text-transform: uppercase;
-  color: #eeeeee;
+  color: #fffefe;
   font-weight: 700;
+  letter-spacing: 1.5px;
   margin-right: 4rem;
+  display: inline-block;
 }
 .quick-search__text:link, .quick-search__text:visited {
-  color: #eeeeee;
+  color: #fffefe;
 }
 .quick-search__text:hover, .quick-search__text:active {
-  color: #eeeeee;
+  color: #fffefe;
 }
 .quick-search__link:link, .quick-search__link:visited {
-  color: #eeeeee;
+  color: #fffefe;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
 }
 .quick-search__link:hover, .quick-search__link:active {
-  color: #eeeeee;
+  color: #fffefe;
 }
 .quick-search__btn {
   font-weight: 700;
-  color: #eeeeee;
+  color: #fffefe;
   background-color: #237377;
   width: 10.375rem;
   height: 2.56rem;
+  display: inline-block;
 }
 .quick-search__search {
   width: 16.5rem;
   height: 2.56rem;
   margin-right: 2rem;
+  display: inline-block;
 }
 .quick-search__search::placeholder {
   font-size: 0.875rem;
 }
 
-.navigation {
-  margin: 0 2rem 0.3125rem 0;
+.social-icons {
+  display: inline-block;
+  vertical-align: bottom;
 }
+.social-icons:not(:last-child) {
+  margin: 0 2.3rem 0 0;
+}
+.social-icons__footer {
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 2.3rem 0 0;
+}
+.social-icons__footer--realty {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.social-icons__footer--realty:not(:last-child) {
+  padding: 0 1.5rem 0 0;
+}
+
 .navigation__icon {
   display: block;
   text-align: center;
-  margin: 0.625rem 1rem;
+  margin: 0.875rem 0 1rem 2rem;
 }
 .navigation__icon--link:link, .navigation__icon--link:visited {
   color: #323232;
@@ -8701,19 +8799,20 @@ h3 {
   text-decoration: none;
 }
 .navigation__icon--text {
-  color: #595959;
-  font-size: 0.875rem;
-  margin-bottom: 0;
+  color: #aaaaaa;
+  font-size: 0.75rem;
+  margin: -0.5rem 0 0 0;
+  letter-spacing: 1px;
 }
 .navigation__logo--main {
   width: auto;
   height: 80px;
-  margin-left: 2rem;
 }
 .navigation__text {
   text-transform: uppercase;
   color: #323232;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 .navigation__text:not(:last-child) {
   margin-right: 3.1rem;
@@ -8728,8 +8827,8 @@ h3 {
   color: #323232;
 }
 .navigation__svg {
-  width: 1rem;
-  height: 1rem;
+  width: 0.825rem;
+  height: 0.825rem;
 }
 
 .footer {
@@ -8737,6 +8836,50 @@ h3 {
   height: 9.44rem;
   background-color: #2399a6;
   color: #eeeeee;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+.footer__contact {
+  display: block;
+  margin-bottom: 1rem;
+  vertical-align: text-bottom;
+}
+.footer__contact--img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.footer__contact--phone-number {
+  color: #fffefe;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  display: inline-block;
+}
+.footer__contact--phone-number:link, .footer__contact--phone-number:visited {
+  color: #fffefe;
+  text-decoration: none;
+}
+.footer__contact--phone-number:hover, .footer__contact--phone-number:active {
+  color: #fffefe;
+}
+.footer__link {
+  text-decoration: underline;
+  padding-right: 0.875rem;
+}
+.footer__link:link, .footer__link:visited {
+  color: #fffefe;
+  text-decoration: underline;
+  display: inline-block;
+}
+.footer__link:hover, .footer__link:active {
+  color: #fffefe;
+}
+.footer__link:last-child {
+  padding: 0 0 0.5rem 2rem;
+}
+.footer__copyright {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

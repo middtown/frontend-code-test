@@ -1,10 +1,9 @@
 .navigation {
-	margin: 0 2rem 0.3125rem 0;
 
 	&__icon {
 		display: block;
 		text-align: center;
-		margin: 0.625rem 1rem;
+		margin: 0.875rem 0 1rem 2rem;
 
 		&--link {
 			&:link,
@@ -21,22 +20,26 @@
 		}
 
 		&--text {
-			color: $color-medium;
+			color: $color-light;
 			font-size: $font-size-sm;
-			margin-bottom: 0;
+			margin: -0.5rem 0 0 0;
+			letter-spacing: 1px;
 		}
 	}
 
-	&__logo--main {
-		width: auto;
-		height: 80px;
-		margin-left: 2rem;
+	&__logo {
+
+		&--main {
+			width: auto;
+			height: 80px;
+		}
 	}
 	
 	&__text {
 		text-transform: uppercase;
 		color: $color-dark;
 		font-weight: $font-weight-bold;
+		letter-spacing: 1px;
 
 		&:not(:last-child) {
 			margin-right: 3.1rem;
@@ -59,7 +62,7 @@
 	}
 
 	&__svg {
-		width: 1rem;
-		height: 1rem;
+		width: 0.825rem;
+		height: 0.825rem;
 	}
 }
