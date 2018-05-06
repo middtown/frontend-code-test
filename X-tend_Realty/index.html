@@ -12,24 +12,29 @@
 	<title>X-tend Realty</title>
 </head>
 <body>
-	<header class="container-fluid px-5 py-1">
+	<header class="container-fluid px-sm-3 py-sm-0 px-lg-5 py-lg-1">
 		<!-- Image and text -->
 		<nav class="navbar navbar-white bg-white p-0">
 		 	<a class="navbar-brand p-0" href="#">
 		   		<img src="assets/SVGs/TEN-logo.svg" class="navigation__logo--main d-inline-block align-top" alt="x-tend logo">
 		 	</a>
-		 	<div class="navigation ">
+		 	<div class="navigation">
 				<ul class="nav justify-content-end">
-			  		<li class="nav-item navigation__icon"> 
+			  		<li class="navigation__icon"> 
 				  		<a class="navigation__icon--link" href="#"><img src="assets/SVGs/contact.svg" class="navigation__svg d-inline-block align-top" alt="contact icon"><p class="navigation__icon--text">Contact</p>
 				  		</a>
 			  		</li>
 			  		<li class="navigation__icon"> 
 				  		<a class="navigation__icon--link" href="#"><img src="assets/SVGs/account.svg" class="navigation__svg d-inline-block align-top" alt="search icon"> <p class="navigation__icon--text">Account</p>
 				  		</a>
-			  		</li>		  
+			  		</li>	
+
+			  		<li class="navigation__icon navigation__icon--hamburger"> 
+				  		<a class="navigation__icon--link" href="#"><img src="assets/SVGs/menu.svg" class="navigation__svg d-inline-block align-top" alt="search icon"> <p class="navigation__icon--text">Menu</p>
+				  		</a>
+			  		</li> 
 				</ul>
-				<ul class="nav">
+				<ul class="nav navigation__mobile">
 				  	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Search</a> </li>
 				  	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Communities</a> </li>
 				 	<li class="nav-item navigation__text"> <a class="navigation__link" href="#">Services</a> </li>
@@ -39,33 +44,42 @@
 		</nav>
 	</header>
 						<!--	QUICK SEARCH AND LINKS BAR	-->
-	<section class="quick-search navbar">
-		<div class="container p-0">
-		<form class="quick-search__form">
-			<input class="quick-search__search" type="text" name="search" placeholder="Address, City, Zip, or MLS #">
-			<button class="btn quick-search__btn">Search</button>
-		</form>
-		<ul class="quick-search__list nav">
-			<li class="nav-item quick-search__text"><a class="quick-search__link" href="#"><u>New Listings</u></a></li>
-			<li class="nav-item quick-search__text"><a class="quick-search__link" href="#"><u>Open House</u></a></li>
-			<li class="nav-item quick-search__text"><a class="quick-search__link" href="#"><u>Map Search</u></a></li>
-		</ul>
+	<section class="quick-search navbar ">
+		<div class="container mx-sm-0 p-md-0">
+			<form class="quick-search__form">
+				<input class="quick-search__search" type="text" name="search" placeholder="Address, City, Zip, or MLS #">
+				<button class="btn quick-search__btn">Search</button>
+			</form>
+			<ul class="nav quick-search__list">
+				<li class="nav-item quick-search__text">
+					<a class="quick-search__link" href="#">
+					<u>New Listings</u></a>
+				</li>
+				<li class="nav-item quick-search__text">
+					<a class="quick-search__link" href="#">
+					<u>Open House</u></a>
+				</li>
+				<li class="nav-item quick-search__text">
+					<a class="quick-search__link" href="#">
+					<u>Map Search</u></a>
+				</li>
+			</ul>
 		</div>
 	</section>
 								<!--	AGENT INFO		-->
 	<section class="agent">
-		<div class="container">
+		<div class="container mx-sm-3">
 			<div class="row">
 
-			<picture class="agent__img col-4 m-0">
+			<picture class="col-12 col-md-3 col-lg-4 agent__img m-0">
 				<source media="(min-width: 1200px)" srcset="assets/Realtor-Image/saramortensun-264w.png">
 				<source media="(min-width: 992px)" srcset="assets/Realtor-Image/saramortensun-213w.png">
 				<source media="(min-width: 768px)" srcset="assets/Realtor-Image/saramortensun-159w.png">
-				<source media="(min-width: 576px)" srcset="assets/Realtor-Image/saramortensun-210w-xs.png">
+				<source media="(max-width: 576px)" srcset="assets/Realtor-Image/saramortensun-210w-xs.png">
 				<img src="assets/Realtor-Image/saramortensun.jpg" alt="sarah mortensun profile photo">
 			</picture>
 
-			<div class="agent__info col-4">
+			<div class="col-sm-3 col-md-4 agent__info">
 				<h2 class="agent__info--name">Jane Smith</h2>
 				<h4 class="agent__info--title">Realtor &reg;</h4>
 				<button class="btn agent__info--btn">Contact Me</button>
@@ -78,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="col-4 agent__contact">
+			<div class="col-md-5 col-lg-4 agent__contact">
 				<ul >
 					<li class="nav-link"><img class="agent__contact--icon" src="assets/SVGs/contact.svg" alt="telephone icon"></img><a class="agent__contact--phone-number ml-3" href="tel:1-530-830-2150" rel="nofollow">503.830.2150</a></li>
 					<li class="nav-link"><img class="agent__contact--icon" src="assets/SVGs/website.svg" alt="website icon"></img><span class="agent__contact--text ml-3">Visit my website</span></li>
@@ -93,7 +107,7 @@
 								<!--	TABS & TABS CONTENT	-->
 
 	<section class="tabs">
-		<div class="container mt-5 mb-3">
+		<div class="container p-md-0 mt-5 mb-3">
 			<div class="row">
 				<ul class="navbar tabs__list mx-auto p-0">
 					<li class="nav-item col-3 tabs__list--active"><a class="nav-link tabs__link tabs__link--active" href="#">about me</a></li>
@@ -104,13 +118,13 @@
 			</div>
 		
 			<div class="row mt-5">
-				<article class="col-8 pl-0">
+				<article class="col-sm-9 col-lg-8 pl-0">
 					<p class="tabs__paragraph">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
 				</article>
 
-				<aside class="col-4">
+				<aside class="col-sm-3 col-lg-4">
 					<ul class="tabs__geo-info--list">
 						<li> 
 							<h6 class="tabs__geo-info--title">language</h6>
@@ -131,8 +145,8 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-6 p-0">
-					<div >
+				<div class="col-12 col-sm-6 p-0">
+					<div class="footer__contact--mobile">
 						<img class="footer__contact--img" src="assets/SVGs/contact.svg" alt="telephone icon"><a class="footer__contact--phone-number" href="tel:1-800-234-4567" rel="nofollow">1-800-234-4567</a></img>
 						<address class="footer__contact">5678 Main Street, Denver, CO 80123</address>
 					</div>
@@ -145,7 +159,7 @@
 					</div>
 				</div> 
 
-				<div class="col-6 p-0">
+				<div class="col-12 col-sm-6 p-0">
 					<ul class="nav justify-content-end">
 						<li class="nav-item"><a class="nav-link footer__link" href="#"> Site Map </a> </li>
 						<li class="nav-item"><a class="nav-link footer__link" href="#"> Terms of Use </a> </li>

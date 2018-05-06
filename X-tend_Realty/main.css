@@ -6,6 +6,16 @@
 					VARIABLES
 ===============================================>>>>>*/
 /*=============================================>>>>>
+	MIXINS used for misc and media queries
+===============================================>>>>>*/
+/*
+break points taken from bootstrap site as best use numbers
+
+em works better than px and rem with media queries...1em = 16px.
+
+@content allows us to pass in a block of code into mixins. 
+*/
+/*=============================================>>>>>
 					BOOTSTRAP
 ===============================================>>>>>*/
 /*!
@@ -8583,14 +8593,33 @@ ul {
   padding: 0;
 }
 
+article {
+  padding: 0;
+}
+
 .agent {
   width: 100%;
   height: 22.625rem;
   background-color: #eeeeee;
 }
+@media only screen and (max-width: 64em) {
+  .agent {
+    height: 13.25rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .agent {
+    height: auto;
+  }
+}
 .agent__img {
   padding: 0;
   display: inline-block;
+}
+@media only screen and (max-width: 64em) {
+  .agent__img {
+    margin-right: -1rem;
+  }
 }
 .agent__info {
   margin-top: 5rem;
@@ -8613,6 +8642,26 @@ ul {
   background-color: #237377;
   width: 16.44rem;
   height: 2.56rem;
+}
+@media only screen and (max-width: 64em) {
+  .agent__info--btn {
+    width: 13.8125rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .agent__info--btn {
+    width: 13.25rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .agent__info {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .agent__info {
+    margin-top: 0.875rem;
+  }
 }
 .agent__contact {
   margin-top: 5rem;
@@ -8641,14 +8690,49 @@ ul {
 .agent__contact--phone-number:hover, .agent__contact--phone-number:active {
   color: #595959;
 }
+@media only screen and (max-width: 64em) {
+  .agent__contact {
+    margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .agent__contact {
+    margin-top: 0.875rem;
+  }
+}
+@media only screen and (max-width: 64em) {
+  .agent {
+    height: 18.313rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .agent {
+    height: 13.56rem;
+  }
+}
 
 .tabs {
   width: 100%;
   height: 31.625rem;
 }
+@media only screen and (max-width: 50.75em) {
+  .tabs {
+    height: 35.625rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .tabs {
+    height: auto;
+  }
+}
 .tabs__list {
   width: 100%;
   margin-bottom: 0;
+}
+@media only screen and (max-width: 50.75em) {
+  .tabs__list {
+    display: none;
+  }
 }
 .tabs__list--area {
   border-bottom: 2px solid #aaaaaa;
@@ -8691,8 +8775,18 @@ ul {
   line-height: 200%;
   margin-right: 1rem;
 }
+@media only screen and (max-width: 50.75em) {
+  .tabs__paragraph {
+    margin-right: 0;
+  }
+}
 .tabs__geo-info--list {
   margin-left: 6rem;
+}
+@media only screen and (max-width: 50.75em) {
+  .tabs__geo-info--list {
+    margin-left: 2rem;
+  }
 }
 .tabs__geo-info--title {
   text-transform: uppercase;
@@ -8714,15 +8808,28 @@ ul {
   width: 100%;
   height: 3.8125rem;
   box-shadow: 0px 1px 1px #eeeeee;
-  vertical-align: middle;
-  display: inline-block;
-}
-.quick-search__form {
   vertical-align: top;
+  display: inline-block;
 }
 .quick-search__list {
   margin-left: 4rem;
   display: inline-block;
+}
+@media only screen and (max-width: 64em) {
+  .quick-search__list {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .quick-search__list {
+    display: flex;
+    align-items: right;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .quick-search__list {
+    display: none;
+  }
 }
 .quick-search__text {
   text-transform: uppercase;
@@ -8738,6 +8845,17 @@ ul {
 .quick-search__text:hover, .quick-search__text:active {
   color: #fffefe;
 }
+@media only screen and (max-width: 64em) {
+  .quick-search__text {
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .quick-search__text {
+    margin-right: 0.875rem;
+    letter-spacing: 0.5px;
+  }
+}
 .quick-search__link:link, .quick-search__link:visited {
   color: #fffefe;
   text-decoration: none;
@@ -8747,6 +8865,10 @@ ul {
 .quick-search__link:hover, .quick-search__link:active {
   color: #fffefe;
 }
+.quick-search__form {
+  vertical-align: top;
+  display: inline-block;
+}
 .quick-search__btn {
   font-weight: 700;
   color: #fffefe;
@@ -8755,14 +8877,51 @@ ul {
   height: 2.56rem;
   display: inline-block;
 }
+@media only screen and (max-width: 64em) {
+  .quick-search__btn {
+    width: 8.25rem;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .quick-search__btn {
+    width: 6rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .quick-search__btn {
+    width: 5rem;
+    text-indent: -9999px;
+    /* sends the text off-screen */
+    background-image: url(assets/SVGs/search.svg);
+    /* shows image */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 .quick-search__search {
   width: 16.5rem;
   height: 2.56rem;
   margin-right: 2rem;
   display: inline-block;
 }
+@media only screen and (max-width: 64em) {
+  .quick-search__search {
+    margin-right: 1rem;
+  }
+}
 .quick-search__search::placeholder {
   font-size: 0.875rem;
+}
+@media only screen and (max-width: 64em) {
+  .quick-search__search {
+    width: 13.31rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .quick-search__search {
+    width: 13.125rem;
+    margin-right: -3px;
+  }
 }
 
 .social-icons {
@@ -8771,6 +8930,16 @@ ul {
 }
 .social-icons:not(:last-child) {
   margin: 0 2.3rem 0 0;
+}
+@media only screen and (max-width: 64em) {
+  .social-icons:not(:last-child) {
+    margin: 0 1.6rem 0 0;
+  }
+}
+@media only screen and (max-width: 50.75em) {
+  .social-icons:not(:last-child) {
+    margin: 0 1.5rem 0 0;
+  }
 }
 .social-icons__footer {
   display: inline-block;
@@ -8790,6 +8959,11 @@ ul {
   text-align: center;
   margin: 0.875rem 0 1rem 2rem;
 }
+@media only screen and (max-width: 50.75em) {
+  .navigation__icon {
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+}
 .navigation__icon--link:link, .navigation__icon--link:visited {
   color: #323232;
   text-decoration: none;
@@ -8804,9 +8978,22 @@ ul {
   margin: -0.5rem 0 0 0;
   letter-spacing: 1px;
 }
+.navigation__icon--hamburger {
+  display: none;
+}
+@media only screen and (max-width: 50.75em) {
+  .navigation__icon--hamburger {
+    display: inline-block;
+  }
+}
 .navigation__logo--main {
   width: auto;
-  height: 80px;
+  height: 5rem;
+}
+@media only screen and (max-width: 50.75em) {
+  .navigation__logo--main {
+    height: 2rem;
+  }
 }
 .navigation__text {
   text-transform: uppercase;
@@ -8830,6 +9017,11 @@ ul {
   width: 0.825rem;
   height: 0.825rem;
 }
+@media only screen and (max-width: 50.75em) {
+  .navigation__mobile {
+    display: none;
+  }
+}
 
 .footer {
   width: 100%;
@@ -8840,10 +9032,21 @@ ul {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 36em) {
+  .footer {
+    height: auto;
+  }
+}
 .footer__contact {
   display: block;
   margin-bottom: 1rem;
   vertical-align: text-bottom;
+}
+@media only screen and (max-width: 36em) {
+  .footer__contact--mobile {
+    display: flex;
+    align-items: center;
+  }
 }
 .footer__contact--img {
   display: inline-block;

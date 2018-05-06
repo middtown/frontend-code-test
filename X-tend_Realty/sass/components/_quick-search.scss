@@ -3,16 +3,25 @@
 	width: 100%;
 	height: 3.8125rem;
 	box-shadow: 0px 1px 1px $color-ultra-light;
-	vertical-align: middle;
+	vertical-align: top;
 	display: inline-block;
-	
-	&__form {
-		vertical-align: top;
-	}
 
 	&__list {
 		margin-left: 4rem;
 		display: inline-block;
+
+		@include respond(medium) {
+			margin-left: 0;
+		}
+
+		@include respond(small) {
+			display: flex;
+			align-items: right;
+		}
+
+		@include respond(xtra-small) {
+			display: none;
+		}
 	}
 
 	&__text {
@@ -32,6 +41,15 @@
 		&:active {
 			color: $color-white;
 		}
+
+		@include respond(medium) {
+			margin-right: 2rem;
+		}
+
+		@include respond(small) {
+			margin-right: 0.875rem;
+			letter-spacing: 0.5px;
+		}
 	}
 
 	&__link {
@@ -48,6 +66,12 @@
 			color: $color-white;
 		}
 	}
+
+	&__form {
+		vertical-align: top;
+		display: inline-block;
+	}
+
 	&__btn {
 		font-weight: $font-weight-bold;
 		color: $color-white;
@@ -55,6 +79,25 @@
 		width: 10.375rem;
 		height: 2.56rem;
 		display: inline-block;
+
+		@include respond(medium) {
+			width: 8.25rem;
+		}
+
+		@include respond(small) {
+			width: 6rem;
+		}
+
+		@include respond(xtra-small) {
+			width: 5rem;
+			text-indent: -9999px;                 /* sends the text off-screen */
+			background-image: url(assets/SVGs/search.svg);  /* shows image */
+			background-repeat: no-repeat;
+			background-position: center; 
+
+
+
+		}	
 	}
 
 	&__search {
@@ -63,8 +106,20 @@
 		margin-right: 2rem;
 		display: inline-block;
 
+		@include respond(medium) {
+			margin-right: 1rem;
+		}
+
 		&::placeholder {
 			font-size: 0.875rem;
 		}
-	}
+
+		@include respond(medium) {
+			width: 13.31rem;
+		}
+
+		@include respond(xtra-small) {
+			width: 13.125rem;
+			margin-right: -3px;
+		}	}
 }

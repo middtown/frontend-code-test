@@ -5,6 +5,10 @@
 		text-align: center;
 		margin: 0.875rem 0 1rem 2rem;
 
+		@include respond(small) {
+			margin: 0.5rem 0 0.5rem 1rem;
+		}
+
 		&--link {
 			&:link,
 			&:visited {
@@ -25,13 +29,25 @@
 			margin: -0.5rem 0 0 0;
 			letter-spacing: 1px;
 		}
+
+		&--hamburger {
+			display:none;
+
+			@include respond(small) {
+				display: inline-block;
+			}
+		}
 	}
 
 	&__logo {
 
 		&--main {
 			width: auto;
-			height: 80px;
+			height: 5rem;
+		
+			@include respond(small) {
+				height: 2rem;
+			}
 		}
 	}
 	
@@ -64,5 +80,12 @@
 	&__svg {
 		width: 0.825rem;
 		height: 0.825rem;
+	}
+
+	&__mobile {
+
+		@include respond(small) {
+			display: none;
+		}
 	}
 }

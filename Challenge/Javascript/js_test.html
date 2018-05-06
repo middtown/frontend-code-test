@@ -146,5 +146,67 @@ Place your answers below this comment block.
 Note: You have jquery already loaded on the page.
 Please also write your jquery in a no conflict manner.
 -->
+
+<script type="text/javascript">
+
+//Task #1
+//Manipulate the Last LI -- Select the Last Li in this list and turn its text red.
+
+jQuery( '#content' ).find( 'ul li:last-child' ).css( 'color', 'red' ); //find last child in unordered list change text to red
+
+
+//Task #2
+//Select specific children from a nested list. -- Select the only the first children of the LI "Sally".
+
+ jQuery( '#content2 li:contains("Sally")' ).find( "ul li:first-child" ).css( 'background-color', 'red' ); //find a list item that contains 'sally' then find its first child in lists belonging to sally
+ 
+
+//Task #3
+//Get a Field value and Write it to the page -- Write the value of the "Code Types" select field to a new div within the fieldset.
+
+jQuery('select[name="CodeTypes"]').change( function() {
+	jQuery( 'fieldset' ).prepend( '<p> ' + jQuery(this).val() + '</p>' ); 
+	//select the specific drop down, add a change function to get the value of items selected and then place in page above option list but within the fieldset
+});
+
+
+//Task #4
+//Find Dimensions of an Element -- Write actual rendered dimensions of the following div including any padding to the div itself.
+
+jQuery( '#setDims' ).text( 'div size = ' + jQuery( '#setDims' ).innerWidth() + 'px' ); //use innerWidth to find width of div and include any padding... built in function available for this.
+
+
+//Task #5
+//Events -- Place a click event on the following link. When clicked toggle it's class name from 'clicked' to 'not-clicked'.
+
+jQuery( '#clickEventLink' ).on( 'click', function() { 
+	let j = jQuery(this);
+	j.data('new-text', 'clicked'); //assign new text to data variable
+
+	if (j.text() == j.data('new-text')) {
+		j.text(j.data('original-text')).removeClass('clicked').addClass('not-clicked'); //save and utilize original value of data object in the 'a' tag
+	} else {
+		j.data('original-text', j.text());
+		j.text(j.data('new-text')).removeClass('not-clicked').addClass('clicked'); //if text is 'click me', change to clicked and remove class to add clicked class
+	}
+});
+
+
+//Task #6
+//Ajax -- Call ajax_return.html and write's its json as a "name": "value" list to the following div:
+
+jQuery("#jsonResponse").load("ajax_return.html #jsonResponse");
+
+// jQuery.ajax({
+// 	method: "GET",
+// 	url: "ajax_return.html",
+// 	cache: false
+// })
+// .done( function( html ) {
+// 	jQuery('#jsonResponse').append( html );
+// });
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,28 @@
+/*=============================================>>>>>
+	MIXINS used for misc and media queries
+===============================================>>>>>*/
+
+//media queries
+
+/*
+break points taken from bootstrap site as best use numbers
+
+em works better than px and rem with media queries...1em = 16px.
+
+@content allows us to pass in a block of code into mixins. 
+*/
+
+@mixin respond($breakpoint) {  //$breakpoint sass variable to pass in query type
+	@if $breakpoint == xtra-small {
+		@media only screen and (max-width: 36em) { @content }; //36em = 576px / 16px
+	}
+	@if $breakpoint == small {
+		@media only screen and (max-width: 50.75em) { @content }; //50.75em = 812px / 16px 
+	}
+	@if $breakpoint == medium {
+		@media only screen and (max-width: 64em) { @content }; //62em = 1024px / 16px
+	}
+	@if $breakpoint == large {
+		@media only screen and (min-width: 75em) { @content }; //75em = 1200px / 16px
+	}
+}

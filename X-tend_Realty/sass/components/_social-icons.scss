@@ -4,6 +4,14 @@
 
 	&:not(:last-child) {
 		margin: 0 2.3rem 0 0;
+
+		@include respond(medium) {
+			margin: 0 1.6rem 0 0;
+		}
+
+		@include respond(small) {
+			margin: 0 1.5rem 0 0;
+		}
 	}
 
 	&__footer {
@@ -20,5 +28,4 @@
 			}
 		}
 	}
-
 }

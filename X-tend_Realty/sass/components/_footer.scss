@@ -4,14 +4,25 @@
 	background-color: $color-accent-2;
 	color: $color-ultra-light;
 	font-weight: $font-weight-light;
-	display:flex;
-	align-items:center;
+	display: flex;
+	align-items: center;
+	
+	@include respond(xtra-small) {
+		height: auto;
+	}
 
 	&__contact {	
 		display: block;
 		margin-bottom: 1rem;
 		vertical-align: text-bottom;
 		
+		&--mobile {
+			@include respond(xtra-small) {
+				display: flex;
+  				align-items: center;
+			}
+		}
+
 		&--img {
 			display: inline-block;
 			vertical-align: bottom;
