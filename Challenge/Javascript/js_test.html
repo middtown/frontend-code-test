@@ -195,16 +195,22 @@ jQuery( '#clickEventLink' ).on( 'click', function() {
 //Task #6
 //Ajax -- Call ajax_return.html and write's its json as a "name": "value" list to the following div:
 
-jQuery("#jsonResponse").load("ajax_return.html #jsonResponse");
+//Use http-server to set up local server to test ajax call.
+jQuery.ajax({
+	method: "GET",
+	url: "ajax_return.html",
+	cache: false
+})
+.done( function( data ) {
+	jQuery('#jsonResponse').append("<ul class='foodList'></ul>"); //create ul tag in div to append li tags for listing
+	// console.log(JSON.parse(data));
+	let food = JSON.parse(data); //parse stringed data to  json data in variable
 
-// jQuery.ajax({
-// 	method: "GET",
-// 	url: "ajax_return.html",
-// 	cache: false
-// })
-// .done( function( html ) {
-// 	jQuery('#jsonResponse').append( html );
-// });
+	jQuery.each(food, function (index, element) { //iterate through json data and append to page.
+		// console.log(element + index );
+		jQuery('.foodList').append( '<li>' + index + ' : ' + element + '</li>').css('list-style', 'none');
+	});
+});
 
 </script>
 
