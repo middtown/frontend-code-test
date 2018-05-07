@@ -12,7 +12,7 @@
 	<title>X-tend Realty</title>
 </head>
 <body>
-	<header class="container-fluid px-sm-3 py-sm-0 px-lg-5 py-lg-1">
+	<header class="container-fluid"> <!-- px-sm-3 py-sm-0 px-lg-5 py-lg-1 -->
 		<!-- Image and text -->
 		<nav class="navbar navbar-white bg-white p-0">
 		 	<a class="navbar-brand p-0" href="#">
@@ -45,7 +45,7 @@
 	</header>
 						<!--	QUICK SEARCH AND LINKS BAR	-->
 	<section class="quick-search navbar ">
-		<div class="container mx-sm-0 p-md-0">
+		<div class="container p-md-0"> <!-- mx-sm-0 p-md-0 -->
 			<form class="quick-search__form">
 				<input class="quick-search__search" type="text" name="search" placeholder="Address, City, Zip, or MLS #">
 				<button class="btn quick-search__btn">Search</button>
@@ -68,7 +68,7 @@
 	</section>
 								<!--	AGENT INFO		-->
 	<section class="agent">
-		<div class="container mx-sm-3">
+		<div class="container">
 			<div class="row">
 
 			<picture class="col-12 col-md-3 col-lg-4 agent__img m-0">
@@ -144,29 +144,29 @@
 
 	<footer class="footer">
 		<div class="container">
-			<div class="row">
+			<div class="row py-4">
 				<div class="col-12 col-sm-6 p-0">
-					<div class="footer__contact--mobile">
+					<div class="footer__contact--mobile flex-wrap justify-content-center justify-content-md-end">
 						<img class="footer__contact--img" src="assets/SVGs/contact.svg" alt="telephone icon"><a class="footer__contact--phone-number" href="tel:1-800-234-4567" rel="nofollow">1-800-234-4567</a></img>
 						<address class="footer__contact">5678 Main Street, Denver, CO 80123</address>
 					</div>
-					<div > 
-						<img class="social-icons__footer" src="assets/SVGs/facebook.svg" alt="facebook icon"></img>
-						<img class="social-icons__footer" src="assets/SVGs/linkedin.svg" alt=" linked-in icon"></img>
-						<img class="social-icons__footer" src="assets/SVGs/twitter.svg" alt="twitter icon"></img>
-						<img class="social-icons__footer" src="assets/SVGs/youtube.svg" alt="you-tube icon"></img>
-						<img class="social-icons__footer" src="assets/SVGs/instagram.svg" alt="instagram icon"></img>
+					<div class="d-flex justify-content-center justify-content-md-start pb-3"> 
+						<img class="social-icons" src="assets/SVGs/facebook.svg" alt="facebook icon"></img>
+						<img class="social-icons" src="assets/SVGs/linkedin.svg" alt=" linked-in icon"></img>
+						<img class="social-icons" src="assets/SVGs/twitter.svg" alt="twitter icon"></img>
+						<img class="social-icons" src="assets/SVGs/youtube.svg" alt="you-tube icon"></img>
+						<img class="social-icons" src="assets/SVGs/instagram.svg" alt="instagram icon"></img>
 					</div>
 				</div> 
 
 				<div class="col-12 col-sm-6 p-0">
-					<ul class="nav justify-content-end">
+					<ul class="nav justify-content-center justify-content-md-end">
 						<li class="nav-item"><a class="nav-link footer__link" href="#"> Site Map </a> </li>
 						<li class="nav-item"><a class="nav-link footer__link" href="#"> Terms of Use </a> </li>
 						<li class="nav-item"><a class="nav-link footer__link" href="#"> Privacy Policy </a> </li>
 					</ul>
-					<p class="footer__copyright d-flex justify-content-end"> &copy; 2016 TEN Realty. All Rights Reserved.</p>
-					<div class="d-flex justify-content-end"> 
+					<p class="footer__copyright d-flex justify-content-center justify-content-md-end"> &copy; 2016 TEN Realty. All Rights Reserved.</p>
+					<div class="d-flex justify-content-center justify-content-md-end"> 
 						<img class="social-icons__footer--realty" src="assets/SVGs/realtor.svg" alt="realtor icon"></img>
 						<img class="social-icons__footer--realty" src="assets/SVGs/equal-housing.svg" alt="equal-housing icon"></img>
 					</div>	

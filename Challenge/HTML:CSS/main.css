@@ -8799,10 +8799,6 @@ article {
   font-weight: 300;
 }
 
-.header {
-  padding: 1rem 1rem 0 1rem;
-}
-
 .quick-search {
   background-color: #aaaaaa;
   width: 100%;
@@ -8940,11 +8936,6 @@ article {
   .social-icons:not(:last-child) {
     margin: 0 1.5rem 0 0;
   }
-}
-.social-icons__footer {
-  display: inline-block;
-  vertical-align: bottom;
-  margin: 0 2.3rem 0 0;
 }
 .social-icons__footer--realty {
   display: inline-block;
